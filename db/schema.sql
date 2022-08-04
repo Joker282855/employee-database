@@ -1,5 +1,11 @@
 DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS positions;
+DROP TABLE IF EXISTS locations;
+
+CREATE TABLE locations (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL
+);
 
 CREATE TABLE positions (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
@@ -13,5 +19,5 @@ CREATE TABLE employees (
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     positions_id INT,
-    assistant_manager_id INT NULL
+    general_manager_id INT NULL
 );
