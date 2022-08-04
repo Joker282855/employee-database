@@ -10,8 +10,8 @@ CREATE TABLE locations (
 CREATE TABLE positions (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL(8, 2) NOT NULL,
-    location_id INT NOT NULL
+    salary DECIMAL(8,2) NOT NULL,
+    locations_id INT NOT NULL
 );
 
 CREATE TABLE employees (
