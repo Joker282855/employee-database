@@ -19,6 +19,18 @@ VALUES ('Team Member', 18324.56, 1),
 ('Shift Lead', 54567.60, 2),
 ('Assistant General Manager', 32457.58, 2),
 ('General Manager', 245678.45, 2),
+('Team Member', 18324.56, 3),
+('Team Member', 18324.56, 3),
+('Team Meber', 18324,56, 3),
+('Shift Lead', 54567.60, 3),
+('Assistant General Manager', 32457.58, 3),
+('General Manager', 245678.45, 3),
+('Team Member', 18324.56, 4),
+('Team Meber', 18324.56, 4),
+('Team Meber', 18324.56, 4),
+('Shift Lead', 54567.60, 4),
+('Assistant General Manager', 32457.58, 4),
+('General Manager', 245678.45, 4);
 
 
 
