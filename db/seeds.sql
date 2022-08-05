@@ -25,11 +25,11 @@ VALUES ('Chief Executive Officer', 18324.56, 1),
 ('Assistant General Manager', 26789.45, 3),
 ('Geenral Manager', 45678.90, 3),
 ('Team Member', 18324.56, 4),
-('Team Meber', 18324.56, 4),
+('Team Meber', 18324.56, 4);
 
 
 
-INSERT INTO employees (first_name, last_name, positions_id, general_manager_id)
+INSERT INTO employees (first_name, last_name, positions_id, chief_id)
 VALUES ('Susan', 'Anthony', 1, NULL),
 ('Max', 'Mayfield', 2, 1),
 ('Happy', 'Dean', 3, 1),
@@ -38,5 +38,17 @@ VALUES ('Susan', 'Anthony', 1, NULL),
 ('Berry', 'School', 6, 1),
 ('Showy', 'Wednesday', 7, 1),
 ('Suzzy', 'Lipskins', 8, 1),
-('Greg', 'Berkowhitz', 9, 1); 
+('Greg', 'Berkowhitz', 9, 1),
+('Charles', 'Baker', 10, 1),
+('Tony', 'Ramalas', 11, 1),
+('Alisha', 'Hurtle', 12, 1),
+('Molly', 'Walker', 13, 1),
+('Holly', 'Berry', 14, 1),
+('James', 'Richardson', 15, 1),
+('Francisco', 'Ramirize', 16, 1),
+('Emily', 'Huffstedder', 17, 1),
+('Chris', 'Mcfallen', 18, 1),
+('Hornet', 'Crusher', 19, 1),
+('Berry', 'Striker', 20, 1),
+('Hank', 'Pristine', 21, 1);
 

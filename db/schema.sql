@@ -19,5 +19,5 @@ CREATE TABLE employees (
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     positions_id INT,
-    general_manager_id INT NULL
+    chief_id INT NULL
 );
