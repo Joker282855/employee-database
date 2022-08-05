@@ -2,9 +2,7 @@ INSERT INTO locations (name)
 VALUES ('Colorado'),
 ('Idaho'),
 ('Delaware'),
-('Utah'),
-('Nevada'),
-('Florida');
+('Utah');
 
 INSERT INTO positions (title, salary, locations_id)
 VALUES ('Chief Executive Officer', 18324.56, 1),
