@@ -6,11 +6,20 @@ VALUES ('Colorado'),
 ('Nevada'),
 ('Florida');
 
-INSERT INTO positions (title, salary, location_id)
+INSERT INTO positions (title, salary, locations_id)
 VALUES ('Team Member', 18324.56, 1),
-('Shift Lead', 4567.60, 1),
-('Assistant General Manager', 32457.58 1),
-('General Manager', 45678.45, 1);
+('Team Member', 18324.56, 1),
+('Team Member', 18324.56, 1),
+('Shift Lead', 54567.60, 1),
+('Assistant General Manager', 32457.58, 1),
+('General Manager', 245678.45, 1),
+('Team Member', 18324.56, 2),
+('Team Member', 18324.56, 2),
+('Team Meber', 18324.56, 2),
+('Shift Lead', 54567.60, 2),
+('Assistant General Manager', 32457.58, 2),
+('General Manager', 245678.45, 2),
+
 
 
 INSERT INTO employees (first_name, last_name, positions_id, general_manager_id)
