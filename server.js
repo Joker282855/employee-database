@@ -9,16 +9,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
-const db = mysql.createConnection(
-    {
-        host: 'localhost',
-        user: 'root',
-        password: 'Coderrocks12!',
-        database: 'record'
-    },
-    console.log('Connected to the record database.')
-);
-
 app.get('/', (req, res) => {
     res.json({
         message: 'Hello World'
