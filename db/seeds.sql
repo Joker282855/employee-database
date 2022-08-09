@@ -25,7 +25,11 @@ VALUES ('Chief Executive Officer', 18324.56, 1),
 ('Assistant General Manager', 26789.45, 3),
 ('Geenral Manager', 45678.90, 3),
 ('Team Member', 18324.56, 4),
-('Team Meber', 18324.56, 4);
+('Team Member', 18324.56, 4),
+('Team Member', 18324.56, 4),
+('Shift Lead', 24579.45, 4),
+('Assistant General Manager', 36789.45, 4),
+('General Manager', 45678.98, 4);
 
 
 
@@ -50,5 +54,9 @@ VALUES ('Susan', 'Anthony', 1, NULL),
 ('Chris', 'Mcfallen', 18, 1),
 ('Hornet', 'Crusher', 19, 1),
 ('Berry', 'Striker', 20, 1),
-('Hank', 'Pristine', 21, 1);
+('Hank', 'Pristine', 21, 1),
+('Brityney', 'Smith', 22, 1),
+('Jessica', 'Thompson', 23, 1),
+('Haily', 'Berry', 24, 1),
+('Michael', 'Jackson', 25, 1);
 
