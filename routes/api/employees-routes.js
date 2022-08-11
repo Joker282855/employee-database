@@ -38,3 +38,34 @@ router.post('/employees', ({ body }, res) => {
         });
     });
 });
+
+router.put('/employees/:id', (req, res) => {
+    const errors = inputCheck(req.body, 'positions_id');
+
+    if (errors) {
+        res.status(400).json({ error: errors });
+        return;
+    }
+
+    const sql = `UPDATE employees SET positions_id = ?
+                WHERE id = ?`;
+    const params = [req.body.positions_id, req.params.id];
+
+    db.query(sql, params, (err, result) => {
+        if (err) {
+            res.status(400).json({ error: err.message });
+        } else if (!result.affectedRows) {
+            res.json({
+                message: 'Employee not found'
+            });
+        } else {
+            res.json({
+                message: 'Employee found',
+                data: req.body,
+                changes: result.affectedRows
+            });
+        }
+    });
+});
+
+module.exports = router;
