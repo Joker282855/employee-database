@@ -22,3 +22,26 @@ router.get('/positions', (req, res) => {
     });
 });
 
+router.post('/positions', ({ body }, res) => {
+   const errors = inputCheck(body, 'title', 'salary', 'locations_id');
+   if (errors) {
+    res.status(400).json({ errors: errors });
+   }
+
+   const sql = `INSERT INTO locations (title, salaru, locations_id)
+                VALUES (?, ?, ?)`;
+   const params = [body.title, body.salary, body.locations_id];
+
+   db.query(sql, params, (err, result) => {
+    if (err) {
+        res.status(400).json({ error: err.message });
+        return;
+    }
+    res.json({
+        message: 'Information added to the table successfully',
+        data: body
+    });
+   });
+});
+
+module.exports = router;
