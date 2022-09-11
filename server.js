@@ -18,9 +18,21 @@ function organizer(){
             name: "View All Employees",
             value: 'viewallemployees'
         },{
-            
-        }
-    ]
+            name: "Add a Location",
+            value: "addALocation"
+        },{
+            name: "Add a Position",
+            value: "addAPosition"
+        },{
+            name: "Add more Employees",
+            value: "addMoreEmployees"
+        },{
+            name: "Update an Employee Position",
+            value: "updateAnEmployeePosition"
+        },{
+            name: "quit",
+            value: "quit"
+        }]
     }])
 }
 
