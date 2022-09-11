@@ -1,5 +1,28 @@
-const express = require('express');
-const mysql = require('mysql2');
+const db = require('./db/connection');
+const inquirer = require('inquirer');
+//const express = require('express');
+//const mysql = require('mysql2');
+
+function organizer(){
+    inquirer.prompt([{
+        type: "list",
+        name: "case",
+        message: "What option would you like to choose",
+        choices: [{
+            name: "View All Locations",
+            value: "viewalllocations"
+        },{
+            name: "View All Positions",
+            value: "viewallpositions"
+        },{
+            name: "View All Employees",
+            value: 'viewallemployees'
+        },{
+            
+        }
+    ]
+    }])
+}
 
 const PORT = process.env.PORT || 3001;
 
