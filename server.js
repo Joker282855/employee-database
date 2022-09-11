@@ -10,13 +10,13 @@ function organizer(){
         message: "What option would you like to choose",
         choices: [{
             name: "View All Locations",
-            value: "viewalllocations"
+            value: "viewAllLocations"
         },{
             name: "View All Positions",
-            value: "viewallpositions"
+            value: "viewAllPositions"
         },{
             name: "View All Employees",
-            value: 'viewallemployees'
+            value: 'viewAllEmployees'
         },{
             name: "Add a Location",
             value: "addALocation"
@@ -33,7 +33,20 @@ function organizer(){
             name: "quit",
             value: "quit"
         }]
-    }])
+    }]).then(function(data){
+        console.log(data)
+        switch (data.case){
+            case "viewAllLocations":
+                viewLocation()
+                break;
+            case "viewAllPositions":
+                viewPosition() 
+                break;
+            case "viewAllEmployees":
+                viewEmployees()
+                break;
+        }
+    })
 }
 
 const PORT = process.env.PORT || 3001;
