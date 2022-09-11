@@ -45,6 +45,18 @@ function organizer(){
             case "viewAllEmployees":
                 viewEmployees()
                 break;
+            case "addALocation":
+                addALocation()
+                break;
+            case "addAPosition":
+                addAPosition()
+                break;
+            case "addMoreEmployees":
+                addMoreEmployees()
+                break;
+            case "updateAnEmployeePosition":
+                updateAnEmployeePosition()
+                break;
         }
     })
 }
