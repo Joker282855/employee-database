@@ -59,7 +59,23 @@ function organizer(){
                 break;
         }
     })
-}
+};
+
+function viewLocation(){
+    db.query("select locations.id, locations.name from locations", (err, data) => {
+        if(err) throw err
+        console.table(data)
+        organizer()
+    })
+};
+
+function viewPosition(){
+    db.query("select positions.id, position.title, position.salary locations.name as location from positions left join locations on positions.location_id = locations.id", (err, data) => {
+        if (err) throw err
+        console.table(data)
+        organizer()
+    })
+};
 
 const PORT = process.env.PORT || 3001;
 
