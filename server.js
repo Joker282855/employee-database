@@ -77,6 +77,10 @@ function viewPosition(){
     })
 };
 
+function viewEmployees(){
+    db.query("select employees.id, employees.first_name, employees.last_name, position.title")
+};
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
