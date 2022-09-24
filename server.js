@@ -78,7 +78,7 @@ function viewPosition(){
 };
 
 function viewEmployees(){
-    db.query("select employees.id, employees.first_name, employees.last_name, position.title")
+    db.query("select employees.id, employees.first_name, employees.last_name, position.title, chief.first_name as chief_first, chief.last_name as chief_last, role.salary, locations.name as location from employees left join postitions on positions_id = positions.id")
 };
 
 const PORT = process.env.PORT || 3001;
