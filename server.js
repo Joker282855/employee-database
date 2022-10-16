@@ -85,7 +85,12 @@ function viewEmployees(){
     })
 };
 
-function updataeEmployees()
+function addALocation(){
+    db.query("")
+    if (err) throw err
+    console.table(data)
+    organizer()
+}
 
 const PORT = process.env.PORT || 3001;
 
