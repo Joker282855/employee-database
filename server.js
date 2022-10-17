@@ -132,6 +132,43 @@ function addAPosition(){
 })
 };
 
+function addMoreEmployees(){
+    inquirer.prompt([{
+        type: "input",
+        name: "first_name",
+        message: "What is your first name"
+    },
+    {
+        type: "input",
+        name: "last_name",
+        message: "What is your last name"
+    },
+    {
+        type: "input",
+        name: "positions_id",
+        message: "What is the id associated with your position"
+    },
+    {
+        type: "input",
+        name: "chief_id",
+        message: "What is the id assocaited with your chief"
+    }
+]).then(function(answers){
+    console.log(answers)
+    db.query("INSERT INTO employees SET ?",{
+        first_name: answers.first_name,
+        last_name: answers.last_name,
+        positions_id: answers.positions_id,
+        chief_id: answers.cheif_id
+    },function(err, data){
+        if (err) throw err
+        console.table(data)
+        organizer()
+    })
+})
+}
+
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
