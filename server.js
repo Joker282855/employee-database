@@ -169,6 +169,7 @@ function addMoreEmployees(){
 }
 
 
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -190,3 +191,5 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is now running on port ${PORT}`);
 });
+
+organizer();
