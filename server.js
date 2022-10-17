@@ -86,11 +86,26 @@ function viewEmployees(){
 };
 
 function addALocation(){
-    db.query("")
-    if (err) throw err
-    console.table(data)
-    organizer()
+    inquirer.prompt([{
+        type: "input",
+        name: "name",
+        message: "What city is your Jamba Juice store located in"
+    }]).then(function(answer){
+        console.log(answer);
+        db.query("INSERT INTO locations SET ?",{
+            name: answer.name
+        },function(error, data){
+            if (error) throw error
+            console.table(data)
+            organizer()
+        })
+    })
+};
+
+function addAPosition(){
+    
 }
+
 
 const PORT = process.env.PORT || 3001;
 
