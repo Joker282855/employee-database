@@ -103,8 +103,36 @@ function addALocation(){
 };
 
 function addAPosition(){
-    
-}
+    inquirer.prompt([{
+        type: "input",
+        name: "title",
+        message: "What is your position"
+    },
+    {
+        type: "input",
+        name: "salary",
+        message: "What is your salary"
+    },
+    {
+        type: "input",
+        name: "locations_id",
+        message: "What is the location id for the Jamba Juice store you work at"
+    }
+]).then(function(answers){
+    console.log(answers);
+    db.query("INSERT INTO positions SET ?",{
+        title: answers.title,
+        salary: answers.salary,
+        locations_id: answers.locations_id
+    },function(err, data){
+        if (err) throw err
+        console.table(data)
+        organizer()
+    })
+})
+};
+
+
 
 
 const PORT = process.env.PORT || 3001;
