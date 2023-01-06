@@ -40,3 +40,5 @@ router.post('/locations', ({ body }, res) => {
         });
     });
 });
+
+module.exports = router
