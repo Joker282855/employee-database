@@ -7,7 +7,7 @@ const db = mysql.createConnection(
         password: 'Coderrocks12!',
         database: 'record'
     },
-    console.log('Now connected to the database tracker')
+    console.log('Now connected to the database record')
 );
 
-module.export = db;
+module.exports = db;
