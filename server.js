@@ -1,7 +1,7 @@
 const db = require('./db/connection');
 const inquirer = require('inquirer');
-//const express = require('express');
-//const mysql = require('mysql2');
+const express = require('express');
+const mysql = require('mysql2');
 
 function organizer(){
     inquirer.prompt([{
