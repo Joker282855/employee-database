@@ -68,7 +68,7 @@ function viewLocation(){
 };
 
 function viewPosition(){
-    db.query("select positions.id, position.title, position.salary, locations.name as location from positions left join locations on positions.location_id = locations.id", (err, data) => {
+    db.query("select positions.id, positions.title, positions.salary, locations.name as location from positions left join locations on positions.locations_id = locations.id", (err, data) => {
         if (err) throw err
         console.table(data)
         organizer()
@@ -76,7 +76,7 @@ function viewPosition(){
 };
 
 function viewEmployees(){
-    db.query("select employees.id, employees.first_name, employees.last_name, position.title, chief.first_name as chief_first, chief.last_name as chief_last, positions.salary, locations.name as location from employees left join postitions on employees.positions_id = positions.id left join locations on positons.locations_id = locations.id left join employees chief on employee.chief_id = chief.id", (err, data) => {
+    db.query("select employees.id, employees.first_name, employees.last_name, positions.title, chief.first_name as chief_first, chief.last_name as chief_last, positions.salary, locations.name as location from employees left join positions on employees.positions_id = positions.id left join locations on positions.locations_id = locations.id left join employees chief on employees.chief_id = chief.id", (err, data) => {
         if (err) throw err
         console.table(data)
         organizer()
